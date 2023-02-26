@@ -1,0 +1,31 @@
+public class PotenciaRecursiva {
+    public static double potencia(double base, int exponente) {
+        if (exponente == 0) {
+            return 1;
+        }
+        if (exponente < 0) {
+            return 1 / potencia(base, -exponente);
+        }
+        return base * potencia(base, exponente - 1);
+    }
+
+    public static void main(String[] args) {
+        double base = 2;
+        int exponente = -3;
+        double resultado = potencia(base, exponente);
+        System.out.printf("%.2f ^ %d = %.2f", base, exponente, resultado);
+    }
+}
+En este ejemplo, la función potencia toma dos argumentos: base y exponente. Si el exponente es 0, la función devuelve 1 (ya que cualquier número elevado a la potencia 0 es 1). Si el exponente es negativo, la función llama a sí misma con el exponente positivo y devuelve el inverso del resultado. Si el exponente es positivo, la función se llama a sí misma con el exponente reducido en 1 y devuelve el resultado multiplicado por la base.
+
+En el método main, se define la base y el exponente que se quieren calcular y se llama a la función potencia con esos valores. El resultado se almacena en la variable resultado y se imprime usando System.out.printf.
+
+Este código debería imprimir lo siguiente:
+
+Copy code
+2.00 ^ -3 = 0.12
+Espero que esto te ayude. ¡Déjame saber si tienes alguna pregunta!
+
+
+
+
